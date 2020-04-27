@@ -1,0 +1,22 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span>{{hero.name}}
+    </a>
+  </li>
+</ul>
+
+
+<!--Moved to hero-detail.component.html-->
+<!--<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase }} Details</h2>
+  <div><span> Id: </span> {{selectedHero.id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="selectedHero.name" placeholder="Please provide a name" />
+    </label>
+  </div>
+</div> -->
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
